@@ -1,0 +1,28 @@
+.hero-nav {
+    display: flex;
+    justify-content: space-between;
+    height: var(--header-height);
+    align-items: center;
+}
+
+
+.header {
+    &-name {
+        color: var(--color-accent);
+        font-size: var(--medium-text);
+    }
+
+    &-nav {
+        &-list {
+            display: flex;
+            column-gap: 30px;
+            padding-inline: 18px;
+        }
+
+        &-item {
+            text-transform: uppercase;
+            font-size: var(--small-text);
+            // color: var(--color-white);
+        }
+    }
+}
