@@ -161,4 +161,11 @@ ul, ol {
   border-right: var(--corner-border);
   border-bottom: var(--corner-border);
   transform: rotate(45deg);
+}
+
+.hero-main-wrapper {
+  height: calc(100vh - var(--header-height));
+  background-image: url("../../img/header/bg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }/*# sourceMappingURL=styles.css.map */
