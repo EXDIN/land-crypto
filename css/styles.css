@@ -1,3 +1,24 @@
+@font-face {
+  font-family: "Rubik";
+  src: url("../fonts/Rubik-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("../fonts/Rubik-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("../fonts/Rubik-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 :root {
   --color-white: rgb(255, 255, 255);
   --color-accent: rgb(237, 76, 92);
@@ -20,6 +41,7 @@
 }
 
 body {
+  font-family: "Rubik", Arial, sans-serif;
   line-height: 1.5;
 }
 
@@ -68,11 +90,23 @@ ul, ol {
   justify-content: space-between;
   height: var(--header-height);
   align-items: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.hero-nav-wrapper {
+  background-color: var(--color-dark);
+}
+@media (max-width: 1000px) {
+  .hero-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .header-name {
   color: var(--color-accent);
   font-size: var(--medium-text);
+  font-weight: 700;
 }
 .header-nav-list {
   display: flex;
@@ -80,7 +114,51 @@ ul, ol {
        column-gap: 30px;
   padding-inline: 18px;
 }
+@media (max-width: 1000px) {
+  .header-nav-list {
+    order: 1;
+    flex-basis: 100%;
+    justify-content: center;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+  }
+}
 .header-nav-item {
   text-transform: uppercase;
   font-size: var(--small-text);
+  color: var(--color-white);
+}
+@media (max-width: 750px) {
+  .header-nav-item {
+    font-size: clamp(12px, 2.5vw, var(--small-text));
+  }
+}
+.header-language {
+  --aling-gap: 12px;
+  border: 2px solid var(--color-accent);
+  padding: 8px var(--aling-gap);
+  border-radius: 20px;
+  display: flex;
+  -moz-column-gap: var(--aling-gap);
+       column-gap: var(--aling-gap);
+  justify-content: space-around;
+  align-items: center;
+}
+.header-language-wraper, .header-language-img {
+  width: 18px;
+  aspect-ratio: 1;
+}
+.header-language-wraper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-language-corner {
+  --corner-border: 2px solid var(--color-white);
+  --corner-size: 45%;
+  height: var(--corner-size);
+  width: var(--corner-size);
+  border-right: var(--corner-border);
+  border-bottom: var(--corner-border);
+  transform: rotate(45deg);
 }/*# sourceMappingURL=styles.css.map */
