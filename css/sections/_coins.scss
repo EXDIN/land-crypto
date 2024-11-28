@@ -1,0 +1,43 @@
+.pages-coins {
+    &-item1 {
+        position: fixed;
+        top: 30vh;
+        left: min(12vw, 300px);
+        
+        @include desktop {
+            left: 5vw;
+        }
+
+        @include tablet {
+            @include visually-hidden;
+        }
+    }
+
+    &-item2 {
+        position: fixed;
+        top: 35vh;
+        right: min(12vw, 300px);
+
+        @include desktop {
+            right: 5vw;
+        }
+
+        @include tablet {
+            @include visually-hidden;
+        }
+    }
+
+    &-item3 {
+        position: fixed;
+        top: 85vh;
+        right: min(11vw, 250px);
+
+        @include desktop {
+            right: 10vw;
+        }
+
+        @include tablet {
+            @include visually-hidden;
+        }
+    }
+}

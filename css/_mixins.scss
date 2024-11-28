@@ -19,3 +19,29 @@ $mobile: 750px;
         @content;
     }
 }
+
+@mixin border-button {
+    padding: 18px 24px;
+    border-radius: 40px;
+    border: 2px solid var(--color-accent);
+    text-transform: uppercase;
+    font-size: var(--small-text);
+    font-weight: var(--font-bold);
+}
+
+@mixin visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0)!important;
+    overflow: hidden !important;
+}
+
+@mixin fluid-text($min, $max) { 
+    font-size: clamp(#{$min}px, #{$max / 1440 * 100}vw, #{$max}px);
+}
