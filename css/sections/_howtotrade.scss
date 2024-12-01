@@ -1,32 +1,22 @@
 .HowToTrade {
-    padding: 90px 0 35px 0;
-    display: flex;
-    flex-direction: column;
-    row-gap: 80px;
+    @include section-layout;
 
     &-title {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        row-gap: 20px;
+        @include title-layout;
         
         &-name {
-            color: var(--color-white);
-            font-size: var(--large-text);
-            font-weight: var(--font-bold);
+            @include title-name;
 
             @include tablet {
-                font-size: clamp(var(--medium-title-text), 6vw,var(--large-text));
+                font-size: clamp(var(--medium-title-text), 6vw, var(--large-text));
             }
         }
 
         &-description {
-            color: var(--color-gray);
-            font-size: var(--medium-text);
-            font-weight: var(--font-medium);
+            @include title-description;
 
             @include tablet {
-                font-size: clamp(var(--small-text), 5vw,var(--medium-text));
+                font-size: clamp(var(--small-text), 5vw, var(--medium-text));
             }
         }
     }
