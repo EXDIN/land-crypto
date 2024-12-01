@@ -6,10 +6,6 @@
     align-items: center;
     column-gap: 10px;
 
-    &-wrapper {
-        background-color: var(--color-dark);
-    }
-
     @include tablet {
         flex-wrap: wrap;
         justify-content: center;
@@ -99,15 +95,17 @@
     &-main {
         &-wrapper {
             min-height: calc(100vh - var(--header-height));
-            padding: 50px 0 110px 0;
+            padding: 50px 0 0 0;
             background-image: 
-                url("../../img/header/bg2.svg"),
                 url("../../img/header/bg3.svg"),
+                url("../../img/header/bg2.svg"),
                 url("../../img/header/bg.svg");
             background-size: cover, cover, cover;
             background-repeat: no-repeat, no-repeat, no-repeat;
-            background-attachment: fixed, fixed, fixed;
-            background-position: center top, center center, center center;
+            background-attachment: scroll, scroll, fixed;
+            background-position: center bottom, center center, center center;
+            // background-origin: padding-box;
+            // background-clip: border-box;
 
             @include mobile {
                 padding: 35px 0 60px 0;
@@ -251,3 +249,4 @@
         }
     }
 }
+

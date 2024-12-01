@@ -1,6 +1,6 @@
 .pages-coins {
     &-item1 {
-        position: fixed;
+        position: absolute;
         top: 30vh;
         left: min(12vw, 300px);
         
@@ -14,7 +14,7 @@
     }
 
     &-item2 {
-        position: fixed;
+        position: absolute;
         top: 35vh;
         right: min(12vw, 300px);
 
@@ -28,7 +28,7 @@
     }
 
     &-item3 {
-        position: fixed;
+        position: absolute;
         top: 85vh;
         right: min(11vw, 250px);
 

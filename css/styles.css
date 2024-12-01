@@ -49,6 +49,7 @@
 body {
   font-family: "Rubik", Arial, sans-serif;
   line-height: 1.5;
+  background-color: var(--color-dark);
 }
 
 input,
@@ -98,9 +99,6 @@ ul, ol {
   align-items: center;
   -moz-column-gap: 10px;
        column-gap: 10px;
-}
-.hero-nav-wrapper {
-  background-color: var(--color-dark);
 }
 @media (max-width: 1000px) {
   .hero-nav {
@@ -180,12 +178,12 @@ ul, ol {
 
 .hero-main-wrapper {
   min-height: calc(100vh - var(--header-height));
-  padding: 50px 0 110px 0;
-  background-image: url("../../img/header/bg2.svg"), url("../../img/header/bg3.svg"), url("../../img/header/bg.svg");
+  padding: 50px 0 0 0;
+  background-image: url("../../img/header/bg3.svg"), url("../../img/header/bg2.svg"), url("../../img/header/bg.svg");
   background-size: cover, cover, cover;
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-attachment: fixed, fixed, fixed;
-  background-position: center top, center center, center center;
+  background-attachment: scroll, scroll, fixed;
+  background-position: center bottom, center center, center center;
 }
 @media (max-width: 750px) {
   .hero-main-wrapper {
@@ -329,7 +327,7 @@ ul, ol {
 }
 
 .pages-coins-item1 {
-  position: fixed;
+  position: absolute;
   top: 30vh;
   left: min(12vw, 300px);
 }
@@ -354,7 +352,7 @@ ul, ol {
   }
 }
 .pages-coins-item2 {
-  position: fixed;
+  position: absolute;
   top: 35vh;
   right: min(12vw, 300px);
 }
@@ -379,7 +377,7 @@ ul, ol {
   }
 }
 .pages-coins-item3 {
-  position: fixed;
+  position: absolute;
   top: 85vh;
   right: min(11vw, 250px);
 }
