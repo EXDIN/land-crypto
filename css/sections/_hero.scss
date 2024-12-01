@@ -108,6 +108,10 @@
             background-repeat: no-repeat, no-repeat, no-repeat;
             background-attachment: fixed, fixed, fixed;
             background-position: center top, center center, center center;
+
+            @include mobile {
+                padding: 35px 0 60px 0;
+            }
         }
 
         &-content {
@@ -119,11 +123,15 @@
             justify-self: center;
             max-width: 730px;
             row-gap: 27px;
+
+            @include mobile {
+                row-gap: 20px;
+            }
         }
     }
 
     &-title {
-        font-size: clamp(var(--medium-title-text), 5.55vw, var(--title-text));
+        font-size: clamp(var(--medium-title-text), 9vw, var(--title-text));
     }
 
     &-market {
@@ -149,6 +157,10 @@
             font-size: var(--medium-title-text);
             font-weight: var(--font-medium);
             line-height: 1.3;
+
+            @include mobile {
+                font-size: var(--medium-text);
+            }
 
             &-unit {
                 color: var(--color-white);
@@ -177,6 +189,11 @@
         column-gap: 30px;
         padding-block: 13px;
 
+        @include mobile {
+            column-gap: 20px;
+            padding-block: 10px;
+        }
+
         &-item:is(:first-child) {
             background-color: var(--color-accent);
         }
@@ -185,6 +202,10 @@
             background-color: rgba(0, 0, 0, 0);
             @include border-button;
             cursor: pointer;
+
+            @include mobile {
+                padding: 10px;
+            }
 
             &:hover {
                 background-color: var(--color-white);
@@ -205,6 +226,12 @@
             align-items: center;
             justify-content: center;
             column-gap: 30px;
+
+            @include mobile {
+                flex-wrap: wrap;
+                column-gap: 20px;
+                row-gap: 15px;
+            }
         }
 
         &-item {
@@ -218,9 +245,9 @@
             font-size: var(--medium-text);
             font-weight: var(--font-thin);
 
-            // @include mobile {
-            //     @include fluid-text(var(--small-text), var(--medium-text));
-            // }
+            @include mobile {
+                font-size: var(--small-text);
+            }
         }
     }
 }
