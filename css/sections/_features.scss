@@ -1,0 +1,68 @@
+.Features {
+    @include section-layout;
+
+    @include tablet {
+        padding: 40px 0 30px 0;
+        row-gap: 40px;
+    }
+
+    &-title {
+        text-align: center;
+
+        &-name {
+            @include title-name;
+        }
+
+        &-description {
+            @include title-description;
+        }
+    }
+
+    &-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+
+        @include desktop {
+            padding-inline: 15px;
+            gap: 25px;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mobile {
+            row-gap: 35px;
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+
+        &-header {
+            display: flex;
+            column-gap: 30px;
+        }
+
+        &-title {
+            color: var(--color-white);
+            font-size: 30px;
+            font-weight: var(--font-medium);
+
+            @include mobile {
+                font-size: var(--medium-text);
+            }
+        }
+
+        &-description {
+            color: var(--color-gray);
+            font-size: var(--medium-text);
+            font-weight: var(--font-thin);
+
+            @include mobile {
+                font-size: var(--small-text);
+            }
+        }
+    }
+}
