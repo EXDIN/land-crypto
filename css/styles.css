@@ -829,4 +829,44 @@ ul, ol {
   .Features-item-description {
     font-size: var(--small-text);
   }
+}
+
+.Platform {
+  padding-block: 165px;
+  height: 660px;
+  width: 100%;
+  background-image: url("../../img/sections/Platform/bg2.svg"), url("../../img/sections/Platform/bg1.svg"), url("../../img/sections/Platform/bg3.svg");
+  background-size: cover, cover, cover;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-attachment: scroll, scroll, scroll;
+  background-position: center center, center center, center center;
+}
+.Platform-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+@media (max-width: 750px) {
+  .Platform-content {
+    row-gap: 20px;
+  }
+}
+.Platform-title {
+  text-align: center;
+  font-size: var(--large-text);
+  font-weight: var(--font-bold);
+  color: var(--color-white);
+}
+@media (max-width: 750px) {
+  .Platform-title {
+    font-size: var(--medium-title-text);
+  }
+}
+.Platform-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  cursor: pointer;
 }/*# sourceMappingURL=styles.css.map */
