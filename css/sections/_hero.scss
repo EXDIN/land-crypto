@@ -95,7 +95,7 @@
     &-main {
         &-wrapper {
             min-height: calc(100vh - var(--header-height));
-            padding: 50px 0 0 0;
+            padding: 50px 0 100px 0;
             background-image: 
                 url("../../img/header/bg3.svg"),
                 url("../../img/header/bg2.svg"),
@@ -104,11 +104,13 @@
             background-repeat: no-repeat, no-repeat, no-repeat;
             background-attachment: scroll, scroll, fixed;
             background-position: center bottom, center center, center center;
-            // background-origin: padding-box;
-            // background-clip: border-box;
+
+            @include tablet {
+                padding: 40px 0 60px 0;
+            }
 
             @include mobile {
-                padding: 35px 0 60px 0;
+                padding: 35px 0 40px 0;
             }
         }
 

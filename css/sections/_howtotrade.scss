@@ -1,0 +1,168 @@
+.HowToTrade {
+    padding: 90px 0 35px 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 80px;
+
+    &-title {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        
+        &-name {
+            color: var(--color-white);
+            font-size: var(--large-text);
+            font-weight: var(--font-bold);
+
+            @include tablet {
+                font-size: clamp(var(--medium-title-text), 6vw,var(--large-text));
+            }
+        }
+
+        &-description {
+            color: var(--color-gray);
+            font-size: var(--medium-text);
+            font-weight: var(--font-medium);
+
+            @include tablet {
+                font-size: clamp(var(--small-text), 5vw,var(--medium-text));
+            }
+        }
+    }
+
+    &-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 120px;
+        
+        &-img {
+            height: 673px;
+            width: 540px;
+            border-radius: 12px;
+
+            &-wrapper {
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 100px;
+                    height: 100px;
+                    background-image: url("../../img/sections/HowToTrade/playbutton.svg");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-attachment:fixed;
+                    background-position: center center;
+                    cursor: pointer;
+                }
+
+
+            }
+
+            @include tablet {
+                height: 500px;
+                width: 400px;
+            }
+
+            @include mobile {
+                height: 400px;
+                width: auto;
+            }
+        }
+
+        &-steps {
+            color: var(--color-accent);
+            display: flex;
+            flex-direction: column;
+            row-gap: 40px;
+            justify-content: center;
+
+            &-title {
+                font-size: var(--medium-title-text);
+                font-weight: var(--font-bold);
+            }
+
+            &-list {
+                display: flex;
+                flex-direction: column;
+                row-gap: 24px;
+
+                @include tablet {
+                    row-gap: 18px;
+                    width: 100%;
+                    align-items: center;
+                }
+            }
+
+            &-item {
+                --color-numbers: var(--color-white);
+                display: flex;
+                max-width: 284px;
+                padding: 12px;
+                column-gap: 16px;
+                font-size: var(--small-text);
+                font-weight: var(--font-thin);
+                border: 2px solid rgba(239, 68, 59, 0.1);
+                border-radius: 80px;
+                align-items: center;
+                transition-duration: 0.4s;
+                cursor: pointer;
+                transition: box-shadow 0.3s ease-in-out;
+
+                div {
+                    display: flex;
+                    width: 42px;
+                    height: 42px;
+                    border-radius: 50%;
+                    background-color: var(--color-accent);
+                    color: var(--color-numbers);
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                &:hover {
+                    background-color: var(--color-white);
+                    color: var(--color-dark);
+                    --color-numbers: var(--color-dark);
+                    box-shadow: 0px 0px 30px rgba(239, 68, 59, 0.8);
+                }
+
+                @include tablet {
+                    width: 80%;
+                    max-width: 80%;
+                }
+
+                @include mobile {
+                    width: 100%;
+                    max-width: 100%;
+                }
+            }
+
+            @include tablet {
+                row-gap: 25px;
+                width: 70%;
+                align-items: center;
+            }
+
+            @include mobile {
+                row-gap: 20px;
+                width: 100%;
+            }
+        }
+
+        @include tablet {
+            grid-template-columns: 1fr;
+            justify-items: center;
+            row-gap: 40px;
+        }
+    }
+
+    @include tablet {
+        padding: 40px 0 30px 0;
+        row-gap: 40px;
+    }
+}
