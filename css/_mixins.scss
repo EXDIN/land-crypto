@@ -9,6 +9,12 @@ $mobile: 750px;
     }
 }
 
+@mixin wide-descktop {
+    @media (max-width: $wide-descktop) {
+        @content;
+    }
+}
+
 @mixin desktop-above {
     @media (min-width: $desktop) {
         @content;

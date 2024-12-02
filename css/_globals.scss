@@ -37,8 +37,16 @@ ul, ol {
         var(--sides-width);
 }
 
+.grid-content-left {
+    grid-column: 1 / 2;
+}
+
 .grid-content-center {
     grid-column: 2 / 3;
+}
+
+.grid-content-right {
+    grid-column: 3 / 4;
 }
 
 .grid-content-full {

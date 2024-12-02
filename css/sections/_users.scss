@@ -1,0 +1,126 @@
+.Users {
+    padding: var(--top-section-padding) 0 150px 0;
+    row-gap: 80px;
+    align-items: center;
+    column-gap: 10px;
+
+    @include tablet {
+        padding: 40px 0 30px 0;
+        row-gap: 40px;
+    }
+
+    &-title {
+        text-align: center;
+
+        &-name {
+            @include title-name;
+        }
+
+        &-description {
+            @include title-description;
+        }
+    }
+
+    &-btn {
+        @include wide-descktop-above {
+            --arrow-color: var(--color-white);
+            position: relative;
+            border-radius: 50%;
+            width: 65px;
+            height: 65px;
+            background-color: rgba(239, 68, 59, 0.1);
+            justify-self: end;
+            border: none;
+            cursor: pointer;
+
+            &:hover {
+                background-color: var(--color-gray);
+                --arrow-color: var(--color-accent);
+                box-shadow: 0px 0px 30px rgba(239, 68, 59, 0.8);
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 40%;
+                left: 55%;
+                transform: translate(-50%, -50%);
+                width: 10px;
+                height: 10px;
+                border-left: 3px solid var(--arrow-color);
+                border-top: 3px solid var(--arrow-color);
+                rotate: -45deg;
+            }
+
+            &-right {
+                justify-self: start;
+                padding-left: 10px;
+
+                &::before {
+                    rotate: 135deg;
+                    left: 25%;
+                }
+            }
+        }
+    }
+
+    &-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 30px;
+
+        @include wide-descktop {
+            grid-template-columns: 1fr;
+            row-gap: 30px;
+            justify-items: center;
+        }
+    }
+
+    &-item {
+        border: 2px solid rgba(239, 68, 59, 0.8);
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 30px;
+        padding: 67px 36px;
+        cursor: pointer;
+
+        @include wide-descktop {
+            max-width: 600px;
+        }
+
+        &-quotes {
+            width: 65px;
+            height: 40px;
+        }
+
+        &:hover {
+            box-shadow: 0px 0px 30px rgba(239, 68, 59, 0.8);
+        }
+
+        &-description {
+            color: var(--color-gray);
+            font-size: var(--small-text);
+            font-weight: var(--font-thin);
+            text-align: center;
+        }
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+            align-items: center;
+        }
+
+        &-name {
+            color: var(--color-white);
+            font-size: var(--medium-text);
+            font-weight: var(--font-thin);
+        }
+
+        &-title {
+            color: var(--color-accent);
+        }
+    }
+}
