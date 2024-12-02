@@ -997,4 +997,110 @@ ul, ol {
 }
 .Users-item-title {
   color: var(--color-accent);
+}
+
+.Market {
+  padding: var(--top-section-padding) 0 150px 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 80px;
+}
+@media (max-width: 1000px) {
+  .Market {
+    padding: 40px 0 30px 0;
+    row-gap: 40px;
+  }
+}
+.Market-title {
+  text-align: center;
+}
+.Market-title-name {
+  color: var(--color-white);
+  font-size: var(--large-text);
+  font-weight: var(--font-bold);
+}
+.Market-title-description {
+  color: var(--color-gray);
+  font-size: var(--medium-text);
+  font-weight: var(--font-medium);
+}
+.Market-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+@media (max-width: 1000px) {
+  .Market-list {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+.Market-item {
+  display: flex;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+@media (max-width: 1000px) {
+  .Market-item {
+    max-width: 600px;
+  }
+}
+.Market-item-img {
+  width: 160px;
+  height: 160px;
+}
+.Market-item-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.Market-item-title {
+  color: var(--color-white);
+  font-size: var(--medium-text);
+  font-weight: var(--font-medium);
+}
+.Market-item-description {
+  color: var(--color-gray);
+  font-size: var(--small-text);
+  font-weight: var(--font-thin);
+}
+.Market-item-link {
+  color: var(--color-accent);
+  font-size: var(--small-text);
+  font-weight: var(--font-thin);
+  text-decoration: none;
+  display: flow-root;
+}
+.Market-item-link:hover {
+  position: relative;
+}
+.Market-item-link:hover::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 14%;
+  transform: translate(-50%, -50%);
+  width: 28%;
+  border-bottom: 2px solid var(--color-white);
+}
+.Market-btn {
+  padding: 18px 24px;
+  border-radius: 40px;
+  border: 2px solid var(--color-accent);
+  text-transform: uppercase;
+  font-size: var(--small-text);
+  font-weight: var(--font-bold);
+  cursor: pointer;
+  align-self: center;
+  max-width: 280px;
+  font-size: var(--small-text);
+  text-transform: uppercase;
+  background-color: inherit;
+  color: var(--color-white);
+}
+.Market-btn:hover {
+  background-color: var(--color-white);
+  color: var(--color-dark);
+  border-color: var(--color-white);
+  box-shadow: 0px 0px 30px rgba(239, 68, 59, 0.8);
 }/*# sourceMappingURL=styles.css.map */

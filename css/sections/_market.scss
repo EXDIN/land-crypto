@@ -1,0 +1,101 @@
+.Market {
+    @include section-layout;
+    @include tablet {
+        padding: 40px 0 30px 0;
+        row-gap: 40px;
+    }
+
+    &-title {
+        text-align: center;
+
+        &-name {
+            @include title-name;
+        }
+
+        &-description {
+            @include title-description;
+        }
+    }
+
+    &-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+
+        @include tablet {
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
+    }
+
+    &-item {
+        display: flex;
+        column-gap: 30px;
+
+        @include tablet {
+            max-width: 600px;
+        }
+
+        &-img {
+            width: 160px;
+            height: 160px;
+        }
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        &-title {
+            color: var(--color-white);
+            font-size: var(--medium-text);
+            font-weight: var(--font-medium);
+        }
+
+        &-description {
+            color: var(--color-gray);
+            font-size: var(--small-text);
+            font-weight: var(--font-thin);
+        }
+
+        &-link {
+            color: var(--color-accent);
+            font-size: var(--small-text);
+            font-weight: var(--font-thin);
+            text-decoration: none;
+            display: flow-root;
+
+            &:hover{
+                position: relative;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 100%;
+                    left: 14%;
+                    transform: translate(-50%, -50%);
+                    width: 28%;
+                    border-bottom: 2px solid var(--color-white);
+                }
+            }
+        }
+    }
+
+    &-btn {
+        @include border-button;
+
+        align-self: center;
+        max-width: 280px;
+        font-size: var(--small-text);
+        text-transform: uppercase;
+        background-color: inherit;
+        color: var(--color-white);
+
+        &:hover {
+            background-color: var(--color-white);
+            color: var(--color-dark);
+            border-color: var(--color-white);
+            box-shadow: 0px 0px 30px rgba(239, 68, 59, 0.8);
+        }
+    }
+}
