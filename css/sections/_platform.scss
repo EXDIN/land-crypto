@@ -3,10 +3,6 @@
     height: 660px;
     width: 100%;
 
-    // @include mobile {
-    //     height: 450px;
-    // }
-
     background-image: 
         url("../../img/sections/Platform/bg2.svg"),
         url("../../img/sections/Platform/bg1.svg"),
@@ -43,6 +39,14 @@
         justify-content: center;
         align-items: center;
         column-gap: 30px;
-        cursor: pointer;
+
+        &-item {
+            cursor: pointer;
+        }
+
+        @include mobile {
+            flex-direction: column;
+            row-gap: 30px;
+        }
     }
 }
