@@ -586,9 +586,18 @@ ul, ol {
 
 .AvaibleCoins {
   padding: var(--top-section-padding) 0 150px 0;
-  display: flex;
-  flex-direction: column;
   row-gap: 80px;
+  align-items: center;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+}
+@media (max-width: 1000px) {
+  .AvaibleCoins {
+    padding: 40px 0 30px 0;
+    row-gap: 40px;
+    -moz-column-gap: 0px;
+         column-gap: 0px;
+  }
 }
 .AvaibleCoins-title {
   text-align: center;
@@ -601,20 +610,10 @@ ul, ol {
   font-size: var(--large-text);
   font-weight: var(--font-bold);
 }
-@media (max-width: 1000px) {
-  .AvaibleCoins-title-name {
-    font-size: clamp(var(--medium-title-text), 6vw, var(--large-text));
-  }
-}
 .AvaibleCoins-title-description {
   color: var(--color-gray);
   font-size: var(--medium-text);
   font-weight: var(--font-medium);
-}
-@media (max-width: 1000px) {
-  .AvaibleCoins-title-description {
-    font-size: clamp(var(--small-text), 5vw, var(--medium-text));
-  }
 }
 .AvaibleCoins-list {
   display: grid;
@@ -648,17 +647,17 @@ ul, ol {
 @media (max-width: 750px) {
   .AvaibleCoins-item {
     flex-direction: column;
-    width: 350px;
+    max-width: 350px;
   }
 }
 .AvaibleCoins-item-img {
   background-color: var(--color-dark);
   max-width: calc((var(--max-content-width) - 60px) / 3);
-  height: calc((var(--max-content-width) - 60px) / 3);
+  max-height: calc((var(--max-content-width) - 60px) / 3);
 }
 @media (max-width: 750px) {
   .AvaibleCoins-item-img {
-    width: 350px;
+    min-width: 200px;
     max-width: 400px;
   }
 }
@@ -717,52 +716,6 @@ ul, ol {
 .AvaibleCoins-item-price-button:hover {
   background-color: var(--color-white);
   color: var(--color-dark);
-}
-@media (min-width: 1350px) {
-  .AvaibleCoins-item:is(:first-child) {
-    position: relative;
-  }
-  .AvaibleCoins-item:is(:first-child)::before {
-    content: "";
-    position: absolute;
-    top: 45%;
-    left: -5vw;
-    transform: translate(-50%, -50%);
-    width: 65px;
-    height: 65px;
-    background-color: rgba(239, 68, 59, 0.1);
-    border-radius: 50%;
-    cursor: pointer;
-    background-image: url("../../img/sections/availableCoins/left.svg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-  }
-  .AvaibleCoins-item:is(:last-child) {
-    position: relative;
-  }
-  .AvaibleCoins-item:is(:last-child)::after {
-    content: "";
-    position: absolute;
-    top: 45%;
-    right: -9vw;
-    transform: translate(-50%, -50%);
-    width: 65px;
-    height: 65px;
-    background-color: rgba(239, 68, 59, 0.1);
-    border-radius: 50%;
-    cursor: pointer;
-    background-image: url("../../img/sections/availableCoins/right.svg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-  }
-}
-@media (max-width: 1000px) {
-  .AvaibleCoins {
-    padding: 40px 0 30px 0;
-    row-gap: 40px;
-  }
 }
 
 .Features {
@@ -891,8 +844,12 @@ ul, ol {
   padding: var(--top-section-padding) 0 150px 0;
   row-gap: 80px;
   align-items: center;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
+}
+@media (min-width: 1200px) {
+  .Users {
+    -moz-column-gap: 25px;
+         column-gap: 25px;
+  }
 }
 @media (max-width: 1000px) {
   .Users {
