@@ -348,11 +348,6 @@ ul, ol {
 }
 @media (max-width: 1200px) {
   .pages-coins-item1 {
-    left: 5vw;
-  }
-}
-@media (max-width: 1000px) {
-  .pages-coins-item1 {
     position: absolute !important;
     width: 1px !important;
     height: 1px !important;
@@ -372,11 +367,6 @@ ul, ol {
   right: min(12vw, 300px);
 }
 @media (max-width: 1200px) {
-  .pages-coins-item2 {
-    right: 5vw;
-  }
-}
-@media (max-width: 1000px) {
   .pages-coins-item2 {
     position: absolute !important;
     width: 1px !important;
@@ -398,11 +388,146 @@ ul, ol {
 }
 @media (max-width: 1200px) {
   .pages-coins-item3 {
-    right: 10vw;
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    -webkit-clip-path: inset(100%) !important;
+            clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
   }
 }
-@media (max-width: 1000px) {
-  .pages-coins-item3 {
+.pages-coins-item4 {
+  position: absolute;
+  top: 100vh;
+  left: min(8vw, 200px);
+}
+@media (max-width: 1200px) {
+  .pages-coins-item4 {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    -webkit-clip-path: inset(100%) !important;
+            clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+  }
+}
+.pages-coins-item5 {
+  position: absolute;
+  top: 185vh;
+  right: min(8vw, 200px);
+}
+@media (max-width: 1200px) {
+  .pages-coins-item5 {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    -webkit-clip-path: inset(100%) !important;
+            clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+  }
+}
+.pages-coins-item6 {
+  position: absolute;
+  top: 195vh;
+  left: min(8vw, 200px);
+}
+@media (max-width: 1200px) {
+  .pages-coins-item6 {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    -webkit-clip-path: inset(100%) !important;
+            clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+  }
+}
+.pages-coins-item7 {
+  position: absolute;
+  top: 275vh;
+  left: min(8vw, 200px);
+}
+@media (max-width: 1200px) {
+  .pages-coins-item7 {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    -webkit-clip-path: inset(100%) !important;
+            clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+  }
+}
+.pages-coins-item8 {
+  position: absolute;
+  top: 285vh;
+  right: min(8vw, 200px);
+}
+@media (max-width: 1200px) {
+  .pages-coins-item8 {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    -webkit-clip-path: inset(100%) !important;
+            clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+  }
+}
+.pages-coins-item9 {
+  position: absolute;
+  top: 450vh;
+  left: min(8vw, 200px);
+}
+@media (max-width: 1200px) {
+  .pages-coins-item9 {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    -webkit-clip-path: inset(100%) !important;
+            clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+  }
+}
+.pages-coins-item10 {
+  position: absolute;
+  top: 450vh;
+  right: min(8vw, 200px);
+}
+@media (max-width: 1200px) {
+  .pages-coins-item10 {
     position: absolute !important;
     width: 1px !important;
     height: 1px !important;

@@ -3,12 +3,8 @@
         position: absolute;
         top: 30vh;
         left: min(12vw, 300px);
-        
-        @include desktop {
-            left: 5vw;
-        }
 
-        @include tablet {
+        @include desktop {
             @include visually-hidden;
         }
     }
@@ -19,10 +15,6 @@
         right: min(12vw, 300px);
 
         @include desktop {
-            right: 5vw;
-        }
-
-        @include tablet {
             @include visually-hidden;
         }
     }
@@ -33,10 +25,76 @@
         right: min(11vw, 250px);
 
         @include desktop {
-            right: 10vw;
+            @include visually-hidden;
         }
+    }
 
-        @include tablet {
+    &-item4 {
+        position: absolute;
+        top: 100vh;
+        left: min(8vw, 200px);
+        
+        @include desktop {
+            @include visually-hidden;
+        }
+    }
+
+    &-item5 {
+        position: absolute;
+        top: 185vh;
+        right: min(8vw, 200px);
+        
+        @include desktop {
+            @include visually-hidden;
+        }
+    }
+
+    &-item6 {
+        position: absolute;
+        top: 195vh;
+        left: min(8vw, 200px);
+        
+        @include desktop {
+            @include visually-hidden;
+        }
+    }
+
+    &-item7 {
+        position: absolute;
+        top: 275vh;
+        left: min(8vw, 200px);
+        
+        @include desktop {
+            @include visually-hidden;
+        }
+    }
+
+    &-item8 {
+        position: absolute;
+        top: 285vh;
+        right: min(8vw, 200px);
+        
+        @include desktop {
+            @include visually-hidden;
+        }
+    }
+
+    &-item9 {
+        position: absolute;
+        top: 450vh;
+        left: min(8vw, 200px);
+        
+        @include desktop {
+            @include visually-hidden;
+        }
+    }
+
+    &-item10 {
+        position: absolute;
+        top: 450vh;
+        right: min(8vw, 200px);
+        
+        @include desktop {
             @include visually-hidden;
         }
     }
